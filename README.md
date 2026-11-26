@@ -8,6 +8,14 @@ Mục tiêu của dự án là thiết kế và triển khai một cơ sở dữ
 
 Dự án được chia thành bốn giai đoạn:
 
+## Thành viên nhóm
+
+| Mã sinh viên | Tên thành viên |
+|---|---|
+| N24DCCN107 | Trương Phước Đông |
+| N24DCCN101 | Nguyễn Hữu Đại |
+| N24DCCN098 | Trình Gia Bảo |
+
 ## Các giai đoạn thực hiện
 
 | Giai đoạn | Thời gian | Nội dung chính |
