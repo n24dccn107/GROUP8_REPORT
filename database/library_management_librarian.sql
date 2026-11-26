@@ -1,0 +1,56 @@
+-- MySQL dump 10.13  Distrib 8.0.45, for Win64 (x86_64)
+--
+-- Host: localhost    Database: library_management
+-- ------------------------------------------------------
+-- Server version	8.0.45
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `librarian`
+--
+
+DROP TABLE IF EXISTS `librarian`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `librarian` (
+  `person_id` bigint NOT NULL,
+  `librarian_id` char(10) NOT NULL,
+  `hire_date` date NOT NULL,
+  `shift` varchar(20) DEFAULT NULL,
+  `Leave_date` date DEFAULT NULL,
+  PRIMARY KEY (`person_id`),
+  UNIQUE KEY `uq_librarian_id` (`librarian_id`),
+  CONSTRAINT `fk_librarian_person` FOREIGN KEY (`person_id`) REFERENCES `person` (`person_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `librarian`
+--
+
+LOCK TABLES `librarian` WRITE;
+/*!40000 ALTER TABLE `librarian` DISABLE KEYS */;
+INSERT INTO `librarian` VALUES (1,'LIB0000001','2020-11-17','Morning',NULL),(2,'LIB0000002','2024-03-09','Evening',NULL),(3,'LIB0000003','2022-01-13','Afternoon','2022-10-19'),(4,'LIB0000004','2022-09-10','Morning','2023-11-25'),(5,'LIB0000005','2023-08-14','Morning',NULL),(6,'LIB0000006','2026-02-08','Evening','2026-08-19'),(7,'LIB0000007','2021-07-04','Morning',NULL),(8,'LIB0000008','2020-09-21','Afternoon',NULL),(9,'LIB0000009','2025-12-11','Evening',NULL),(10,'LIB0000010','2023-09-16','Afternoon',NULL),(11,'LIB0000011','2021-11-09','Afternoon','2022-05-01'),(12,'LIB0000012','2025-05-09','Morning',NULL),(13,'LIB0000013','2022-11-05','Evening',NULL),(14,'LIB0000014','2023-11-17','Afternoon',NULL),(15,'LIB0000015','2024-05-29','Afternoon','2025-02-08'),(16,'LIB0000016','2025-06-13','Evening',NULL),(17,'LIB0000017','2024-02-22','Evening',NULL),(18,'LIB0000018','2023-01-21','Afternoon',NULL),(19,'LIB0000019','2026-03-16','Morning',NULL),(20,'LIB0000020','2024-09-21','Afternoon',NULL),(21,'LIB0000021','2022-02-23','Afternoon',NULL),(22,'LIB0000022','2023-01-06','Afternoon',NULL),(23,'LIB0000023','2022-09-06','Afternoon',NULL),(24,'LIB0000024','2025-09-04','Evening',NULL),(25,'LIB0000025','2025-12-21','Afternoon',NULL),(26,'LIB0000026','2020-12-01','Morning',NULL),(27,'LIB0000027','2024-05-03','Evening',NULL),(28,'LIB0000028','2024-10-08','Evening',NULL),(29,'LIB0000029','2021-01-22','Morning',NULL),(30,'LIB0000030','2022-11-13','Morning',NULL),(31,'LIB0000031','2021-10-17','Afternoon',NULL),(32,'LIB0000032','2025-04-16','Morning',NULL),(33,'LIB0000033','2023-03-26','Morning',NULL),(34,'LIB0000034','2025-03-23','Evening',NULL),(35,'LIB0000035','2022-12-23','Afternoon',NULL),(36,'LIB0000036','2022-08-17','Morning',NULL),(37,'LIB0000037','2020-05-26','Evening',NULL),(38,'LIB0000038','2020-06-21','Evening',NULL),(39,'LIB0000039','2020-11-12','Morning',NULL),(40,'LIB0000040','2020-08-27','Evening',NULL),(41,'LIB0000041','2021-08-28','Afternoon',NULL),(42,'LIB0000042','2025-01-14','Morning',NULL),(43,'LIB0000043','2024-12-16','Morning',NULL),(44,'LIB0000044','2020-08-30','Afternoon',NULL),(45,'LIB0000045','2023-11-28','Afternoon',NULL);
+/*!40000 ALTER TABLE `librarian` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2026-11-26 22:02:18
